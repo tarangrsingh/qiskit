@@ -1,5 +1,4 @@
 # Quantum Metal Database for Superconducting Circuit by Tarang (QMDSCT)
-metal repo
 
 This is my quantum metal database. It is intentionally kept simplistic :)
 

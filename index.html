@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>QMDSCT</title>
+<style>
+  :root {
+    --bg: #fbfbfa;
+    --fg: #1b1b1a;
+    --muted: #6b6b68;
+    --line: #d8d8d4;
+    --circuit: #1b1b1a;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #16181c;
+      --fg: #e8e8e6;
+      --muted: #9a9a96;
+      --line: #2e3238;
+      --circuit: #e8e8e6;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #16181c;
+    --fg: #e8e8e6;
+    --muted: #9a9a96;
+    --line: #2e3238;
+    --circuit: #e8e8e6;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    min-height: 100vh;
+    background: var(--bg);
+    color: var(--fg);
+    font: 16px/1.6 ui-sans-serif, system-ui, -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
+    display: flex;
+    align-items: center;
+  }
+
+  /* Transmon qubit watermark: a Josephson junction shunted by a large capacitor. */
+  .bg {
+    position: fixed;
+    inset: 0;
+    display: grid;
+    place-items: center;
+    z-index: 0;
+    pointer-events: none;
+  }
+  .bg svg {
+    width: min(78vmin, 620px);
+    height: auto;
+    color: var(--circuit);
+    opacity: .07;
+  }
+
+  main {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    max-width: 44rem;
+    margin: 0 auto;
+    padding: 4rem 16px;
+  }
+
+  h1 {
+    margin: 0 0 .25rem;
+    font-size: clamp(1.5rem, 4.5vw, 2.25rem);
+    line-height: 1.2;
+    letter-spacing: -0.015em;
+  }
+  .abbr { color: var(--muted); font-weight: 400; }
+  p { margin: 0 0 2rem; }
+
+  h2 {
+    margin: 0 0 .75rem;
+    font-size: .8rem;
+    font-weight: 600;
+    letter-spacing: .09em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+  ul { margin: 0; padding: 0; list-style: none; }
+  li { padding-top: 1rem; border-top: 1px solid var(--line); }
+  a { color: inherit; }
+  a:hover { text-decoration-thickness: 2px; }
+  li span { display: block; color: var(--muted); font-size: .925rem; }
+</style>
+</head>
+<body>
+
+<div class="bg" aria-hidden="true">
+  <!-- Transmon: Josephson junction (left, X) in parallel with the shunt capacitor (right). -->
+  <svg viewBox="0 0 400 300" fill="none" stroke="currentColor"
+       stroke-width="4" stroke-linecap="round">
+    <!-- loop -->
+    <path d="M120 70 H280 M120 230 H280"/>
+    <!-- left branch: leads into the Josephson junction -->
+    <path d="M120 70 V130 M120 170 V230"/>
+    <!-- Josephson junction symbol -->
+    <path d="M100 130 L140 170 M140 130 L100 170"/>
+    <!-- right branch: leads into the shunt capacitor -->
+    <path d="M280 70 V140 M280 160 V230"/>
+    <!-- capacitor plates -->
+    <path d="M235 140 H325 M235 160 H325"/>
+  </svg>
+</div>
+
+<main>
+  <h1>Quantum Metal Database for Superconducting Circuit by Tarang <span class="abbr">(QMDSCT)</span></h1>
+  <p>This is my quantum metal database. It is intentionally kept simplistic :)</p>
+
+  <h2>Projects</h2>
+  <ul>
+    <li>
+      <a href="qiskit-metal-resonator/"><code>qiskit-metal-resonator/</code></a>
+      <span>Quarter-wave CPW readout resonator coupled to a feedline — Qiskit Metal layout, GDS export, analytic CPW model.</span>
+    </li>
+  </ul>
+</main>
+
+</body>
+</html>
