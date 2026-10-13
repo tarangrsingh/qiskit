@@ -88,6 +88,22 @@
   a { color: inherit; }
   a:hover { text-decoration-thickness: 2px; }
   li span { display: block; color: var(--muted); font-size: .925rem; }
+
+  footer { margin-top: 2.5rem; }
+  .btn {
+    display: inline-block;
+    padding: .6rem 1.1rem;
+    border: 1px solid var(--line);
+    border-radius: 7px;
+    font-size: .925rem;
+    text-decoration: none;
+    transition: background-color .15s, color .15s, border-color .15s;
+  }
+  .btn:hover {
+    background: var(--fg);
+    border-color: var(--fg);
+    color: var(--bg);
+  }
 </style>
 </head>
 <body>
@@ -120,6 +136,10 @@
       <span>Quarter-wave CPW readout resonator coupled to a feedline — Qiskit Metal layout, GDS export, analytic CPW model.</span>
     </li>
   </ul>
+
+  <footer>
+    <a class="btn" href="PENDING_WEBSITE_URL">My website &rarr;</a>
+  </footer>
 </main>
 
 </body>
