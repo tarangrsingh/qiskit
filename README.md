@@ -1,5 +1,6 @@
-# qiskit
-metal repo
+# Quantum Metal Database for Superconducting Circuit by Tarang (QMDSCT)
+
+This is my quantum metal database. It is intentionally kept simplistic :)
 
 ## Projects
 
