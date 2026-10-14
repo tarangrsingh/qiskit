@@ -74,6 +74,22 @@
   }
   .abbr { color: var(--muted); font-weight: 400; }
 
+  figure { margin: 0 0 2.5rem; }
+  figure img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    background: #fff;
+  }
+  figcaption {
+    margin-top: .6rem;
+    color: var(--muted);
+    font-size: .875rem;
+    line-height: 1.5;
+  }
+
   h2 {
     margin: 0 0 .75rem;
     font-size: .8rem;
@@ -126,6 +142,12 @@
 
 <main>
   <h1>Quantum Metal Database for Superconducting Circuit by Tarang <span class="abbr">(QMDSCT)</span></h1>
+  <figure>
+    <img src="assets/four-qubit-readout-unit-cell.png"
+         alt="Qiskit Metal layout of a four-qubit readout unit cell: four transmons Q1 to Q4 at the corners of an octagonal nearest-neighbour bus, each coupled to a meandered quarter-wave readout resonator, which couples through a multiplexed transmission-line coupler to a quarter-wave filter resonator; all four filter resonators meet at a central through-silicon via to the shared readout line.">
+    <figcaption>Qiskit Metal rebuild of the four-qubit readout unit cell — transmons on an octagonal bus, each read out through a &lambda;/4 resonator and bandpass filter, multiplexed onto one line through a central TSV.</figcaption>
+  </figure>
+
   <h2>Projects</h2>
   <ul>
     <li>
