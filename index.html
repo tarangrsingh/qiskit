@@ -95,6 +95,17 @@
   .cite .title { font-style: italic; }
   .cite .where { color: var(--muted); }
 
+  details { margin-top: .85rem; }
+  summary {
+    cursor: pointer;
+    font-size: .875rem;
+    color: var(--muted);
+  }
+  summary:hover { color: var(--fg); }
+  details[open] summary { margin-bottom: .85rem; }
+  details p { font-size: .925rem; }
+  details .cite { border-top: none; padding-top: 0; margin-bottom: 0; }
+
   h2 {
     margin: 0 0 .75rem;
     font-size: .8rem;
@@ -108,7 +119,7 @@
   li strong { font-weight: 600; }
   a { color: inherit; }
   a:hover { text-decoration-thickness: 2px; }
-  li span { display: block; color: var(--muted); font-size: .925rem; }
+  li > span { display: block; color: var(--muted); font-size: .925rem; }
 
   footer { margin-top: 2.5rem; }
   .btn {
@@ -155,23 +166,6 @@
 
   <p class="note">I will be adding notes analyzing the circuits, please revisit for more!</p>
 
-  <h2>Paper</h2>
-  <p>This is the first paper I am studying, through replication of the exact
-     circuitry on Metal and understanding the math behind it. I will also add
-     my notes in some time.</p>
-  <p class="cite">
-    P. A. Spring, L. Milanovic, Y. Sunada, S. Wang, A. F. van Loo, S. Tamate,
-    and Y. Nakamura,
-    <a class="title" href="https://journals.aps.org/prxquantum/abstract/10.1103/PRXQuantum.6.020345">Fast
-    Multiplexed Superconducting-Qubit Readout with Intrinsic Purcell Filtering
-    Using a Multiconductor Transmission Line</a>,
-    <span class="where">PRX Quantum <b>6</b>, 020345 (2025).
-    Preprint: <a href="https://arxiv.org/abs/2409.04967">arXiv:2409.04967</a>.</span>
-  </p>
-
-  <p class="note">The next paper I'm going to study will be from Professor
-     Wallraff's lab. Stay tuned!</p>
-
   <h2>Projects</h2>
   <ul>
     <li>
@@ -180,7 +174,21 @@
     </li>
     <li>
       <strong>Spring et al., PRX Quantum <b>6</b>, 020345 (2025)</strong>
-      <span>Replicating the exact circuitry on Metal and understanding the math behind it.</span>
+      <details>
+        <summary>Paper details</summary>
+        <p>This is the first paper I am studying, through replication of the
+           exact circuitry on Metal and understanding the math behind it. I
+           will also add my notes in some time.</p>
+        <p class="cite">
+          P. A. Spring, L. Milanovic, Y. Sunada, S. Wang, A. F. van Loo,
+          S. Tamate, and Y. Nakamura,
+          <a class="title" href="https://journals.aps.org/prxquantum/abstract/10.1103/PRXQuantum.6.020345">Fast
+          Multiplexed Superconducting-Qubit Readout with Intrinsic Purcell
+          Filtering Using a Multiconductor Transmission Line</a>,
+          <span class="where">PRX Quantum <b>6</b>, 020345 (2025).
+          Preprint: <a href="https://arxiv.org/abs/2409.04967">arXiv:2409.04967</a>.</span>
+        </p>
+      </details>
     </li>
     <li>
       <a href="qiskit-metal-resonator/"><code>qiskit-metal-resonator/</code></a>
