@@ -104,7 +104,8 @@
     color: var(--muted);
   }
   ul { margin: 0; padding: 0; list-style: none; }
-  li { padding-top: 1rem; border-top: 1px solid var(--line); }
+  li { padding: 1rem 0; border-bottom: 1px solid var(--line); }
+  li strong { font-weight: 600; }
   a { color: inherit; }
   a:hover { text-decoration-thickness: 2px; }
   li span { display: block; color: var(--muted); font-size: .925rem; }
@@ -174,8 +175,16 @@
   <h2>Projects</h2>
   <ul>
     <li>
+      <strong>Professor Wallraff's lab</strong>
+      <span>Next paper. Stay tuned!</span>
+    </li>
+    <li>
+      <strong>Spring et al., PRX Quantum <b>6</b>, 020345 (2025)</strong>
+      <span>Replicating the exact circuitry on Metal and understanding the math behind it.</span>
+    </li>
+    <li>
       <a href="qiskit-metal-resonator/"><code>qiskit-metal-resonator/</code></a>
-      <span>Quarter-wave CPW readout resonator coupled to a feedline — Qiskit Metal layout, GDS export, analytic CPW model.</span>
+      <span>Quarter-wave CPW readout resonator coupled to a feedline &mdash; Qiskit Metal layout, GDS export, analytic CPW model.</span>
     </li>
   </ul>
 
