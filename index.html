@@ -117,6 +117,14 @@
   ul { margin: 0; padding: 0; list-style: none; }
   li { padding: 1rem 0; border-bottom: 1px solid var(--line); }
   li strong { font-weight: 600; }
+  .pnum {
+    display: block;
+    margin-bottom: .3rem;
+    font-size: .75rem;
+    font-weight: 600;
+    letter-spacing: .08em;
+    color: var(--muted);
+  }
   a { color: inherit; }
   a:hover { text-decoration-thickness: 2px; }
   li > span { display: block; color: var(--muted); font-size: .925rem; }
@@ -169,16 +177,17 @@
   <h2>Projects</h2>
   <ul>
     <li>
-      <strong>Professor Wallraff's lab</strong>
-      <span>Next paper. Stay tuned!</span>
+      <span class="pnum">P#3</span>
+      <span>The next paper I'm going to study will be from professor wallraff's lab. stay tuned!</span>
     </li>
     <li>
+      <span class="pnum">P#2</span>
       <strong>Spring et al., PRX Quantum <b>6</b>, 020345 (2025)</strong>
       <details>
         <summary>Paper details</summary>
-        <p>This is the first paper I am studying, through replication of the
-           exact circuitry on Metal and understanding the math behind it. I
-           will also add my notes in some time.</p>
+        <p>this is the first paper that I am studying, through replication of
+           the exact circuitry on metal and understanding the math behind it, I
+           will also add my notes in sometime</p>
         <p class="cite">
           P. A. Spring, L. Milanovic, Y. Sunada, S. Wang, A. F. van Loo,
           S. Tamate, and Y. Nakamura,
@@ -191,6 +200,7 @@
       </details>
     </li>
     <li>
+      <span class="pnum">P#1</span>
       <a href="qiskit-metal-resonator/"><code>qiskit-metal-resonator/</code></a>
       <span>Quarter-wave CPW readout resonator coupled to a feedline &mdash; Qiskit Metal layout, GDS export, analytic CPW model.</span>
     </li>
